@@ -1,0 +1,34 @@
+<launch>
+  <include
+    file="$(find gazebo_ros)/launch/empty_world.launch" />
+  <param name="robot_description" command="cat $(find robot_ros_gk)/urdf/robot_ros_gk.urdf" />
+  <param name="use_sim_time" value="true"/>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+  <node
+    name="tf_footprint_base"
+    pkg="tf"
+    type="static_transform_publisher"
+    args="0 0 0 0 0 0 base_link base_footprint 40" />
+  <node
+    name="spawn_model"
+    pkg="gazebo_ros"
+    type="spawn_model"
+    args="-file $(find robot_ros_gk)/urdf/robot_ros_gk.urdf -urdf -model robot_ros_gk"
+    output="screen" />
+  <node
+    name="fake_joint_calibration"
+    pkg="rostopic"
+    type="rostopic"
+    args="pub /calibrated std_msgs/Bool true" />
+  <rosparam file="$(find robot_ros_gk)/config/controll.yaml" command="load" />
+  <node
+    name="controller_spawner"
+    pkg="controller_manager"
+    type="spawner"
+    args="khau1_joint_position_controller khau2_joint_position_controller"
+    output="screen" />
+  <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find robot_ros_gk)/rviz/mophongrviz.rviz" required="false" launch-prefix="bash -c 'sleep 10; $0 $@'" />
+</launch>
+
+

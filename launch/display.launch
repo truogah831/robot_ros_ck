@@ -1,0 +1,16 @@
+<launch>
+  <arg
+    name="model" />
+  <param
+    name="robot_description"
+    textfile="$(find robot_ros_gk)/urdf/robot_ros_gk.urdf" />
+  <node
+    name="robot_state_publisher"
+    pkg="robot_state_publisher"
+    type="robot_state_publisher" />
+  <node
+    name="rviz"
+    pkg="rviz"
+    type="rviz"
+    args="-d $(find robot_ros_gk)/urdf.rviz" />
+</launch>

@@ -1,0 +1,820 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="robot_ros_gk">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0227970405907787 -3.02623057399989E-05 0.0259881435598489"
+        rpy="0 0 0" />
+      <mass
+        value="0.527327964410731" />
+      <inertia
+        ixx="0.000640688576324311"
+        ixy="-4.60231415528497E-08"
+        ixz="-1.60591832275139E-07"
+        iyy="0.00200912911881809"
+        iyz="7.77293736242602E-11"
+        izz="0.00261331056586891" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ros_gk/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ros_gk/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="banhtraisau_link">
+    <inertial>
+      <origin
+        xyz="1.38777878078145E-17 1.38777878078145E-17 0.0150833895939276"
+        rpy="0 0 0" />
+      <mass
+        value="0.0734919260346546" />
+      <inertia
+        ixx="4.45273895329904E-05"
+        ixy="5.76639827095674E-21"
+        ixz="1.61121036314707E-20"
+        iyy="4.45273895329904E-05"
+        iyz="3.43059938073875E-21"
+        izz="7.80097515170451E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ros_gk/meshes/banhtraisau_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ros_gk/meshes/banhtraisau_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="banhtraisau_link_joint"
+    type="continuous">
+    <origin
+      xyz="-0.08596 0.1241 0.014318"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="banhtraisau_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="banhphaisau_link">
+    <inertial>
+      <origin
+        xyz="1.38777878078145E-17 -1.38777878078145E-17 -0.0150833895939276"
+        rpy="0 0 0" />
+      <mass
+        value="0.0734919260346546" />
+      <inertia
+        ixx="4.45273895329903E-05"
+        ixy="-1.33362734134229E-20"
+        ixz="1.04212162915766E-20"
+        iyy="4.45273895329904E-05"
+        iyz="-7.11013338701993E-22"
+        izz="7.8009751517045E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ros_gk/meshes/banhphaisau_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ros_gk/meshes/banhphaisau_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="banhphaisau_link_joint"
+    type="continuous">
+    <origin
+      xyz="-0.08596 -0.1241 0.014318"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="banhphaisau_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="trutaymay_link">
+    <inertial>
+      <origin
+        xyz="7.57972447307242E-09 5.14611103730189E-09 -0.0278680936480781"
+        rpy="0 0 0" />
+      <mass
+        value="0.282569490408897" />
+      <inertia
+        ixx="0.000394975772567928"
+        ixy="-1.63534932283893E-06"
+        ixz="3.20993633314502E-11"
+        iyy="0.000394975542110068"
+        iyz="-3.81562874929635E-11"
+        izz="0.000391214759288688" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ros_gk/meshes/trutaymay_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ros_gk/meshes/trutaymay_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="trutaymay_link_joint"
+    type="fixed">
+    <origin
+      xyz="-0.045427 -0.0015382 0.068"
+      rpy="3.1416 0 0.7854" />
+    <parent
+      link="base_link" />
+    <child
+      link="trutaymay_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="khau1_link">
+    <inertial>
+      <origin
+        xyz="0.00156774198874927 -0.000652656929735852 0.126358627057701"
+        rpy="0 0 0" />
+      <mass
+        value="0.267175646223408" />
+      <inertia
+        ixx="0.000665818869133716"
+        ixy="1.05801521895385E-06"
+        ixz="-2.36689410975453E-05"
+        iyy="0.00068559382971246"
+        iyz="1.31058859642379E-05"
+        izz="0.000111898705322211" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ros_gk/meshes/khau1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ros_gk/meshes/khau1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="khau1_link_joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 -0.015"
+      rpy="3.1416 0 0.7854" />
+    <parent
+      link="trutaymay_link" />
+    <child
+      link="khau1_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0.1"
+      effort="10"
+      velocity="0.1" />
+    <gazebo>
+      <plugin name="khau1_link_joint" filename="libgazebo_ros_control.so">
+        <hardwareInterface>PositionJointInterface</hardwareInterface>
+      </plugin>
+    </gazebo>
+  </joint>
+  <link
+    name="khau2_link">
+    <inertial>
+      <origin
+        xyz="0.125697400600578 -0.0166558129943211 0.00633232655346834"
+        rpy="0 0 0" />
+      <mass
+        value="0.166914032024925" />
+      <inertia
+        ixx="3.43056435973208E-05"
+        ixy="7.21819142546534E-05"
+        ixz="-6.98728190196815E-06"
+        iyy="0.000725610322678349"
+        iyz="7.13435007449521E-07"
+        izz="0.000749188447559246" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ros_gk/meshes/khau2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ros_gk/meshes/khau2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="khau2_link_joint"
+    type="revolute">
+    <origin
+      xyz="-0.005723 -0.032713 0.19696"
+      rpy="1.5708 0 0" />
+    <parent
+      link="khau1_link" />
+    <child
+      link="khau2_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.3"
+      upper="1.57"
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="daukep_link">
+    <inertial>
+      <origin
+        xyz="0.0340616552225212 0.00458895459813079 -0.0171361525435593"
+        rpy="0 0 0" />
+      <mass
+        value="0.0519542946238163" />
+      <inertia
+        ixx="1.19029924768056E-05"
+        ixy="1.10583011267502E-08"
+        ixz="1.583639514617E-07"
+        iyy="9.86862871341646E-06"
+        iyz="-1.44094512956148E-07"
+        izz="1.39559671006325E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ros_gk/meshes/daukep_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ros_gk/meshes/daukep_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="daukep_link_joint"
+    type="fixed">
+    <origin
+      xyz="0.23795 -0.028269 0.007"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="khau2_link" />
+    <child
+      link="daukep_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="camera_link">
+    <inertial>
+      <origin
+        xyz="-0.00939274698668374 0 -0.00106137342194758"
+        rpy="0 0 0" />
+      <mass
+        value="0.00236745140592382" />
+      <inertia
+        ixx="9.79074901358523E-08"
+        ixy="-3.66717599804701E-24"
+        ixz="-1.28332500092104E-08"
+        iyy="1.02150611612328E-07"
+        iyz="-9.11444668144134E-24"
+        izz="9.28820151783273E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ros_gk/meshes/camera_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ros_gk/meshes/camera_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="camera_link_joint"
+    type="fixed">
+    <origin
+      xyz="0.16071 0 0.05825"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="camera_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="lidar_link">
+    <inertial>
+      <origin
+        xyz="0.00759150060436392 -6.93889390390723E-18 -0.0111854943900236"
+        rpy="0 0 0" />
+      <mass
+        value="0.0858350837785103" />
+      <inertia
+        ixx="2.80446897872303E-05"
+        ixy="-1.15533925047628E-21"
+        ixz="6.07178023049773E-06"
+        iyy="5.22834636955613E-05"
+        iyz="-1.26107264399989E-21"
+        izz="7.24236756299104E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ros_gk/meshes/lidar_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ros_gk/meshes/lidar_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_link_joint"
+    type="fixed">
+    <origin
+      xyz="0.083214 0 0.103"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="gps_link">
+    <inertial>
+      <origin
+        xyz="6.93889390390723E-18 0.000460852401486874 -0.000489732307491202"
+        rpy="0 0 0" />
+      <mass
+        value="0.00152770883565398" />
+      <inertia
+        ixx="3.91271661137632E-07"
+        ixy="-1.29673830620739E-23"
+        ixz="1.19120609239483E-24"
+        iyy="9.54941870527927E-08"
+        iyz="-1.32479464099464E-10"
+        izz="4.86477086328905E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ros_gk/meshes/gps_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ros_gk/meshes/gps_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gps_link_joint"
+    type="fixed">
+    <origin
+      xyz="-0.038051 0.047135 0.001"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="gps_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="banhtraitruoc_link">
+    <inertial>
+      <origin
+        xyz="1.31221201057907E-06 4.04190569902596E-15 0.0150833895369077"
+        rpy="0 0 0" />
+      <mass
+        value="0.0734919260346545" />
+      <inertia
+        ixx="4.45273897864017E-05"
+        ixy="2.44745835009237E-21"
+        ixz="2.91287022841161E-09"
+        iyy="4.45273895329903E-05"
+        iyz="-3.2367085576799E-21"
+        izz="7.80097512636335E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ros_gk/meshes/banhtraitruoc_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ros_gk/meshes/banhtraitruoc_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="banhtraitruoc_link_joint"
+    type="continuous">
+    <origin
+      xyz="0.094693 0.1155 0.01"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="banhtraitruoc_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="banhphaitruoc_link">
+    <inertial>
+      <origin
+        xyz="-6.68215482946266E-14 3.34801630863524E-15 -0.0150833895938771"
+        rpy="0 0 0" />
+      <mass
+        value="0.0734919260346547" />
+      <inertia
+        ixx="4.45273895329904E-05"
+        ixy="-4.08379281106138E-21"
+        ixz="-1.09394636010138E-21"
+        iyy="4.45273895329904E-05"
+        iyz="1.5902140883326E-22"
+        izz="7.80097515170452E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ros_gk/meshes/banhphaitruoc_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ros_gk/meshes/banhphaitruoc_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="banhphaitruoc_link_joint"
+    type="continuous">
+    <origin
+      xyz="0.094693 -0.1155 0.01"
+      rpy="1.5708 0 -8.6997E-05" />
+    <parent
+      link="base_link" />
+    <child
+      link="banhphaitruoc_link" />
+    <axis
+      xyz="8.6997E-05 0 1" />
+  </joint>
+
+
+  <!-- dieukhienxedichuyen -->
+  <gazebo>
+    <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+      <updateRate>10</updateRate>
+      <leftJoint>banhtraisau_link_joint</leftJoint>
+      <rightJoint>banhphaisau_link_joint</rightJoint>
+      <wheelSeparation>0.5380</wheelSeparation>
+      <wheelDiameter>0.2410</wheelDiameter>
+      <wheelAcceleration>1.0</wheelAcceleration>
+      <wheelTorque>20</wheelTorque>
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <robotBaseFrame>base_link</robotBaseFrame>
+      <odometrySource>1</odometrySource>
+      <publishWheelTF>true</publishWheelTF>
+      <publishOdom>true</publishOdom>
+      <publishWheelJointState>true</publishWheelJointState>
+      <publishTf>true</publishTf>
+      <legacyMode>false</legacyMode>
+      <rosDebugLevel>na</rosDebugLevel>
+    </plugin>
+  </gazebo>
+
+  <gazebo>
+    <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+      <updateRate>10</updateRate>
+      <leftJoint>banhtraitruoc_link_joint</leftJoint>
+      <rightJoint>banhphaitruoc_link_joint</rightJoint>
+      <wheelSeparation>0.5380</wheelSeparation>
+      <wheelDiameter>0.2410</wheelDiameter>
+      <wheelAcceleration>1.0</wheelAcceleration>
+      <wheelTorque>20</wheelTorque>
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <robotBaseFrame>base_link</robotBaseFrame>
+      <odometrySource>1</odometrySource>
+      <publishWheelTF>true</publishWheelTF>
+      <publishOdom>true</publishOdom>
+      <publishWheelJointState>true</publishWheelJointState>
+      <publishTf>true</publishTf>
+      <legacyMode>false</legacyMode>
+      <rosDebugLevel>na</rosDebugLevel>
+    </plugin>
+  </gazebo>
+
+
+  <!-- camera -->
+  <gazebo reference="camera_link">
+    <sensor type="camera" name="camera1">
+      <update_rate>30.0</update_rate>
+      <camera name="head">
+        <horizontal_fov>1.3962634</horizontal_fov>
+        <image>
+          <width>800</width>
+          <height>800</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.02</near>
+          <far>300</far>
+        </clip>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.007</stddev>
+        </noise>
+      </camera>
+      <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>0.0</updateRate>
+        <cameraName>rrbot/camera1</cameraName>
+        <imageTopicName>image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <frameName>camera_link</frameName>
+        <hackBaseline>0.07</hackBaseline>
+        <distortionK1>0.0</distortionK1>
+        <distortionK2>0.0</distortionK2>
+        <distortionK3>0.0</distortionK3>
+        <distortionT1>0.0</distortionT1>
+        <distortionT2>0.0</distortionT2>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+  <!-- lidar -->
+  <gazebo reference="lidar_link">
+    <sensor type="ray" name="lidar_sensor">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>30</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>720</samples>
+            <resolution>1</resolution>
+            <min_angle>-1.5708</min_angle>
+            <max_angle>1.5708</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.1</min>
+          <max>30.0</max>
+          <resolution>0.01</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <plugin name="gazebo_ros_laser" filename="libgazebo_ros_laser.so">
+        <topicName>/scan</topicName>
+        <frameName>lidar_link</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+  <!-- gps -->
+  <gazebo>
+      <plugin name="gazebo_ros_gps" filename="libhector_gazebo_ros_gps.so">
+        <updateRate>4.0</updateRate>
+        <bodyName>gps_link</bodyName>
+        <frameId>gps_link</frameId>
+        <topicName>/gps/fix</topicName>
+        <velocityTopicName>/gps/fix_velocity</velocityTopicName>
+        <referenceLatitude>-30.06022459407145675</referenceLatitude>
+        <referenceLongitude>-51.173913575780311191</referenceLongitude>
+        <referenceHeading>90</referenceHeading>
+        <referenceAltitude>10</referenceAltitude>
+        <offset>0 0 0</offset>
+        <drift>0.001 0.001 0.001</drift>
+        <gaussianNoise>0.05 0.05 0.05</gaussianNoise>
+        <velocityDrift>0.001 0.001 0.001</velocityDrift>
+        <velocityGaussianNoise>0.5 0.5 0.5</velocityGaussianNoise>
+      </plugin>
+  </gazebo>
+
+
+  <!-- plugin control -->
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so"/>
+  </gazebo>
+
+  <!-- Transmission cho tay may -->
+  <transmission name="khau1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="khau1_link_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_khau1">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="khau2_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="khau2_link_joint">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_khau2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+
+</robot>

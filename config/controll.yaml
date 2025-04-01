@@ -1,0 +1,12 @@
+khau2_joint_position_controller:
+  type: "effort_controllers/JointPositionController"
+  joint: khau2_link_joint
+  pid: {p: 20.0, i: 0.01, d: 0.1}
+
+khau1_joint_position_controller:
+  type: "position_controllers/JointPositionController"
+  joint: khau1_link_joint
+  pid: {p: 10.0, i: 0.01, d: 0.1}
+
+
+
