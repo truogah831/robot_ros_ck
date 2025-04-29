@@ -95,7 +95,7 @@
     <child
       link="banhtraisau_link" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 0 -1" />
   </joint>
   <link
     name="banhphaisau_link">
@@ -148,7 +148,7 @@
     <child
       link="banhphaisau_link" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 0 -1" />
   </joint>
   <link
     name="trutaymay_link">
@@ -672,30 +672,6 @@
       <rosDebugLevel>na</rosDebugLevel>
     </plugin>
   </gazebo>
-
-  <gazebo>
-    <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
-      <updateRate>10</updateRate>
-      <leftJoint>banhtraitruoc_link_joint</leftJoint>
-      <rightJoint>banhphaitruoc_link_joint</rightJoint>
-      <wheelSeparation>0.5380</wheelSeparation>
-      <wheelDiameter>0.2410</wheelDiameter>
-      <wheelAcceleration>1.0</wheelAcceleration>
-      <wheelTorque>20</wheelTorque>
-      <commandTopic>cmd_vel</commandTopic>
-      <odometryTopic>odom</odometryTopic>
-      <odometryFrame>odom</odometryFrame>
-      <robotBaseFrame>base_link</robotBaseFrame>
-      <odometrySource>1</odometrySource>
-      <publishWheelTF>true</publishWheelTF>
-      <publishOdom>true</publishOdom>
-      <publishWheelJointState>true</publishWheelJointState>
-      <publishTf>true</publishTf>
-      <legacyMode>false</legacyMode>
-      <rosDebugLevel>na</rosDebugLevel>
-    </plugin>
-  </gazebo>
-
 
   <!-- camera -->
   <gazebo reference="camera_link">

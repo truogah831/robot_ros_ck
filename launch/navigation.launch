@@ -1,0 +1,44 @@
+<launch>
+  <!-- Khởi động Gazebo với thế giới -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find robot_ros_gk)/worlds/test.world"/>
+  </include>
+
+  <!-- Định nghĩa mô hình robot -->
+  <param name="robot_description" textfile="$(find robot_ros_gk)/urdf/robot_ros_gk.urdf" />
+
+  <!-- Node publish joint state -->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+  <!-- Node publish robot state (TF) -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+  <!-- Spawn robot vào Gazebo -->
+  <node name="spawn_model" pkg="gazebo_ros" type="spawn_model" args="-file $(find robot_ros_gk)/urdf/robot_ros_gk.urdf -urdf -model robot_ros_gk" output="screen" />
+
+  <!-- Fake joint calibration -->
+  <node name="fake_joint_calibration" pkg="rostopic" type="rostopic" args="pub /calibrated std_msgs/Bool true" />
+
+  <!-- Chạy map_server để tải bản đồ -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find robot_ros_gk)/maps/my_map.yaml" />
+
+  <!-- Chạy AMCL để định vị -->
+  <node name="amcl" pkg="amcl" type="amcl" output="screen">
+    <rosparam file="$(find robot_ros_gk)/config/amcl_params.yaml" command="load" />
+  </node>
+
+  <!-- Chạy move_base để điều hướng -->
+  <node name="move_base" pkg="move_base" type="move_base" respawn="false" output="screen">
+    <rosparam file="$(find robot_ros_gk)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find robot_ros_gk)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find robot_ros_gk)/config/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find robot_ros_gk)/config/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find robot_ros_gk)/config/move_base_params.yaml" command="load" />
+    <rosparam file="$(find robot_ros_gk)/config/base_local_planner_params.yaml" command="load" />
+    <remap from="cmd_vel" to="/cmd_vel"/>
+    <remap from="odom" to="/odom"/>
+  </node>
+
+  <!-- Chạy RViz để hình dung -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find robot_ros_gk)/rviz/navigation.rviz" />
+</launch>

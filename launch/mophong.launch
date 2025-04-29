@@ -3,7 +3,10 @@
     file="$(find gazebo_ros)/launch/empty_world.launch" />
   <param name="robot_description" command="cat $(find robot_ros_gk)/urdf/robot_ros_gk.urdf" />
   <param name="use_sim_time" value="true"/>
-  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+  <node 
+    name="robot_state_publisher" 
+    pkg="robot_state_publisher" 
+    type="robot_state_publisher" />
   <node
     name="tf_footprint_base"
     pkg="tf"
@@ -27,8 +30,17 @@
     type="spawner"
     args="khau1_joint_position_controller khau2_joint_position_controller"
     output="screen" />
-  <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find robot_ros_gk)/rviz/mophongrviz.rviz" required="false" launch-prefix="bash -c 'sleep 10; $0 $@'" />
+  <node 
+    name="joint_state_publisher_gui" 
+    pkg="joint_state_publisher_gui" 
+    type="joint_state_publisher_gui" />
+  <node 
+    name="rviz" 
+    pkg="rviz" 
+    type="rviz" 
+    args="-d $(find robot_ros_gk)/rviz/mophongrviz.rviz" 
+    required="false" 
+    launch-prefix="bash -c 'sleep 10; $0 $@'" />
 </launch>
 
 
