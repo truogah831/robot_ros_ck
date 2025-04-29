@@ -1,0 +1,7 @@
+image: /home/hoangcuong/catkin_ws/src/robot_ros_gk/maps/map3_level3.pgm
+resolution: 0.050000
+origin: [-7.097930, -9.892722, 0.000000]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
+
