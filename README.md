@@ -19,6 +19,7 @@
     ```
 
 - **joint_state_publisher_gui**: Gói để xuất bản và điều chỉnh các trạng thái của các khớp.
+
   - Cài đặt:
     ```bash
     sudo apt-get install ros-noetic-joint-state-publisher-gui
